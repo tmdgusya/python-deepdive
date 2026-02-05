@@ -1,0 +1,14 @@
+digraph CFG {
+	graph [bgcolor=white dpi=150 rankdir=TB]
+	node [fontname=monospace fontsize=10 shape=box]
+	edge [fontsize=9]
+	fontname=monospace fontsize=14 label="CFG: For loop" labelloc=t
+	block_0 [label="Block 0\n──────────────────────────────\nRESUME 0\nLOAD_CONST 1 (0)\nSTORE_FAST 1 ('total')\nLOAD_GLOBAL 1 ('range')\nLOAD_FAST 0 ('n')\nCALL 1\nGET_ITER" fillcolor="#E3F2FD" style=filled]
+	block_28 [label="Block 28\n──────────────────────────────\nFOR_ITER 7 (46)" fillcolor="#FFF9C4" style=filled]
+	block_32 [label="Block 32\n──────────────────────────────\nSTORE_FAST 2 ('i')\nLOAD_FAST_LOAD_FAST 18 (('t...\nBINARY_OP 13\nSTORE_FAST 1 ('total')\nJUMP_BACKWARD 9 (28)" fillcolor="#F5F5F5" style=filled]
+	block_46 [label="Block 46\n──────────────────────────────\nEND_FOR\nPOP_TOP\nLOAD_FAST 1 ('total')\nRETURN_VALUE" fillcolor="#C8E6C9" style=filled]
+	block_0 -> block_28 [color="#666666"]
+	block_28 -> block_46 [label=iter color="#FF9800" style=dashed]
+	block_28 -> block_32 [label=next color="#FF9800" style=dashed]
+	block_32 -> block_28 [color="#666666"]
+}

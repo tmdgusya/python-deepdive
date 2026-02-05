@@ -1,0 +1,15 @@
+digraph CFG {
+	graph [bgcolor=white dpi=150 rankdir=TB]
+	node [fontname=monospace fontsize=10 shape=box]
+	edge [fontsize=9]
+	fontname=monospace fontsize=14 label="CFG: While loop" labelloc=t
+	block_0 [label="Block 0\n──────────────────────────────\nRESUME 0\nLOAD_CONST 1 (0)\nSTORE_FAST 1 ('i')\nLOAD_FAST_LOAD_FAST 16 (('i...\nCOMPARE_OP 18 ('<')\nPOP_JUMP_IF_FALSE 12 (40)" fillcolor="#E3F2FD" style=filled]
+	block_16 [label="Block 16\n──────────────────────────────\nLOAD_FAST 1 ('i')\nLOAD_CONST 2 (1)\nBINARY_OP 13\nSTORE_FAST 1 ('i')\nLOAD_FAST_LOAD_FAST 16 (('i...\nCOMPARE_OP 18 ('<')\nPOP_JUMP_IF_FALSE 2 (40)" fillcolor="#FFE0B2" style=filled]
+	block_36 [label="Block 36\n──────────────────────────────\nJUMP_BACKWARD 12 (16)" fillcolor="#F5F5F5" style=filled]
+	block_40 [label="Block 40\n──────────────────────────────\nLOAD_FAST 1 ('i')\nRETURN_VALUE" fillcolor="#C8E6C9" style=filled]
+	block_0 -> block_40 [label=False color="#FF9800" style=dashed]
+	block_0 -> block_16 [label=True color="#FF9800" style=dashed]
+	block_16 -> block_40 [label=False color="#FF9800" style=dashed]
+	block_16 -> block_36 [label=True color="#FF9800" style=dashed]
+	block_36 -> block_16 [color="#666666"]
+}

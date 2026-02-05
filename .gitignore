@@ -1,0 +1,42 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Project specific
+.omc/
+.sisyphus/
+.claude/
+
+# Tool caches
+.ruff_cache/
+.mypy_cache/
+.pytest_cache/
+
+# Jupyter notebooks
+.ipynb_checkpoints/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log

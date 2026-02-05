@@ -1,0 +1,55 @@
+digraph AST {
+	graph [bgcolor=white dpi=150 rankdir=TB]
+	node [fontsize=10]
+	edge [color="#666666"]
+	fontname=monospace fontsize=14 label="Factorial Function AST" labelloc=t
+	node_1 [label=Module fillcolor="#E3F2FD" fontname=monospace shape=box style=filled]
+	node_2 [label="FunctionDef\n'factorial'" fillcolor="#BBDEFB" fontname=monospace shape=box style=filled]
+	node_1 -> node_2
+	node_3 [label=arguments fillcolor="#F5F5F5" fontname=monospace shape=box style=filled]
+	node_2 -> node_3
+	node_4 [label="arg\n'n'" fillcolor="#EEEEEE" fontname=monospace shape=box style=filled]
+	node_3 -> node_4
+	node_5 [label=If fillcolor="#FFE0B2" fontname=monospace shape=box style=filled]
+	node_2 -> node_5
+	node_6 [label="Compare\nLtE" fillcolor="#66BB6A" fontname=monospace shape=box style=filled]
+	node_5 -> node_6
+	node_7 [label="Name\n'n'" fillcolor="#C8E6C9" fontname=monospace shape=box style=filled]
+	node_6 -> node_7
+	node_8 [label=Load fillcolor="#FAFAFA" fontname=monospace shape=box style=filled]
+	node_7 -> node_8
+	node_9 [label=LtE fillcolor="#FAFAFA" fontname=monospace shape=box style=filled]
+	node_6 -> node_9
+	node_10 [label="Constant\n1" fillcolor="#E0E0E0" fontname=monospace shape=box style=filled]
+	node_6 -> node_10
+	node_11 [label=Return fillcolor="#FFA726" fontname=monospace shape=box style=filled]
+	node_5 -> node_11
+	node_12 [label="Constant\n1" fillcolor="#E0E0E0" fontname=monospace shape=box style=filled]
+	node_11 -> node_12
+	node_13 [label=Return fillcolor="#FFA726" fontname=monospace shape=box style=filled]
+	node_2 -> node_13
+	node_14 [label="BinOp\nMult" fillcolor="#C8E6C9" fontname=monospace shape=box style=filled]
+	node_13 -> node_14
+	node_15 [label="Name\n'n'" fillcolor="#C8E6C9" fontname=monospace shape=box style=filled]
+	node_14 -> node_15
+	node_16 [label=Load fillcolor="#FAFAFA" fontname=monospace shape=box style=filled]
+	node_15 -> node_16
+	node_17 [label=Mult fillcolor="#FAFAFA" fontname=monospace shape=box style=filled]
+	node_14 -> node_17
+	node_18 [label=Call fillcolor="#4CAF50" fontname=monospace shape=box style=filled]
+	node_14 -> node_18
+	node_19 [label="Name\n'factorial'" fillcolor="#C8E6C9" fontname=monospace shape=box style=filled]
+	node_18 -> node_19
+	node_20 [label=Load fillcolor="#FAFAFA" fontname=monospace shape=box style=filled]
+	node_19 -> node_20
+	node_21 [label="BinOp\nSub" fillcolor="#C8E6C9" fontname=monospace shape=box style=filled]
+	node_18 -> node_21
+	node_22 [label="Name\n'n'" fillcolor="#C8E6C9" fontname=monospace shape=box style=filled]
+	node_21 -> node_22
+	node_23 [label=Load fillcolor="#FAFAFA" fontname=monospace shape=box style=filled]
+	node_22 -> node_23
+	node_24 [label=Sub fillcolor="#FAFAFA" fontname=monospace shape=box style=filled]
+	node_21 -> node_24
+	node_25 [label="Constant\n1" fillcolor="#E0E0E0" fontname=monospace shape=box style=filled]
+	node_21 -> node_25
+}
