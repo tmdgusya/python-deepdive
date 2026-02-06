@@ -1,0 +1,61 @@
+digraph AST {
+	graph [bgcolor=white dpi=150 rankdir=TB]
+	node [fontsize=10]
+	edge [color="#666666"]
+	fontname=monospace fontsize=14 label="Calculator Class AST" labelloc=t
+	node_1 [label=Module fillcolor="#E3F2FD" fontname=monospace shape=box style=filled]
+	node_2 [label="ClassDef\n'Calculator'" fillcolor="#90CAF9" fontname=monospace shape=box style=filled]
+	node_1 -> node_2
+	node_3 [label="FunctionDef\n'__init__'" fillcolor="#BBDEFB" fontname=monospace shape=box style=filled]
+	node_2 -> node_3
+	node_4 [label=arguments fillcolor="#F5F5F5" fontname=monospace shape=box style=filled]
+	node_3 -> node_4
+	node_5 [label="arg\n'self'" fillcolor="#EEEEEE" fontname=monospace shape=box style=filled]
+	node_4 -> node_5
+	node_6 [label=Assign fillcolor="#FF9800" fontname=monospace shape=box style=filled]
+	node_3 -> node_6
+	node_7 [label="Attribute\n'.result'" fillcolor="#43A047" fontname=monospace shape=box style=filled]
+	node_6 -> node_7
+	node_8 [label="Name\n'self'" fillcolor="#C8E6C9" fontname=monospace shape=box style=filled]
+	node_7 -> node_8
+	node_9 [label=Load fillcolor="#FAFAFA" fontname=monospace shape=box style=filled]
+	node_8 -> node_9
+	node_10 [label=Store fillcolor="#FAFAFA" fontname=monospace shape=box style=filled]
+	node_7 -> node_10
+	node_11 [label="Constant\n0" fillcolor="#E0E0E0" fontname=monospace shape=box style=filled]
+	node_6 -> node_11
+	node_12 [label="FunctionDef\n'add'" fillcolor="#BBDEFB" fontname=monospace shape=box style=filled]
+	node_2 -> node_12
+	node_13 [label=arguments fillcolor="#F5F5F5" fontname=monospace shape=box style=filled]
+	node_12 -> node_13
+	node_14 [label="arg\n'self'" fillcolor="#EEEEEE" fontname=monospace shape=box style=filled]
+	node_13 -> node_14
+	node_15 [label="arg\n'x'" fillcolor="#EEEEEE" fontname=monospace shape=box style=filled]
+	node_13 -> node_15
+	node_16 [label=AugAssign fillcolor="#FB8C00" fontname=monospace shape=box style=filled]
+	node_12 -> node_16
+	node_17 [label="Attribute\n'.result'" fillcolor="#43A047" fontname=monospace shape=box style=filled]
+	node_16 -> node_17
+	node_18 [label="Name\n'self'" fillcolor="#C8E6C9" fontname=monospace shape=box style=filled]
+	node_17 -> node_18
+	node_19 [label=Load fillcolor="#FAFAFA" fontname=monospace shape=box style=filled]
+	node_18 -> node_19
+	node_20 [label=Store fillcolor="#FAFAFA" fontname=monospace shape=box style=filled]
+	node_17 -> node_20
+	node_21 [label=Add fillcolor="#FAFAFA" fontname=monospace shape=box style=filled]
+	node_16 -> node_21
+	node_22 [label="Name\n'x'" fillcolor="#C8E6C9" fontname=monospace shape=box style=filled]
+	node_16 -> node_22
+	node_23 [label=Load fillcolor="#FAFAFA" fontname=monospace shape=box style=filled]
+	node_22 -> node_23
+	node_24 [label=Return fillcolor="#FFA726" fontname=monospace shape=box style=filled]
+	node_12 -> node_24
+	node_25 [label="Attribute\n'.result'" fillcolor="#43A047" fontname=monospace shape=box style=filled]
+	node_24 -> node_25
+	node_26 [label="Name\n'self'" fillcolor="#C8E6C9" fontname=monospace shape=box style=filled]
+	node_25 -> node_26
+	node_27 [label=Load fillcolor="#FAFAFA" fontname=monospace shape=box style=filled]
+	node_26 -> node_27
+	node_28 [label=Load fillcolor="#FAFAFA" fontname=monospace shape=box style=filled]
+	node_25 -> node_28
+}
